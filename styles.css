@@ -116,8 +116,7 @@
   }
 
   /* mobile menu */
-  .mobile-menu > div{
-    display: flex;
+  .mobile-menu {
     position: absolute;
     top: 70px;
     left: 0;
@@ -126,7 +125,7 @@
     background: var(--white);
     flex-direction: column;
     padding: 24px;
-    height: calc(100vh - 48px);
+    height: calc(100vh - 120px);
     justify-content: space-around;
   }
   .mobile-menu ul {
@@ -152,6 +151,11 @@
   }
   .mobile-menu > ul:last-child li {
     margin-bottom: 5px;
+  }
+
+  .mobile-menu > ul:last-child  {
+    position: absolute;
+    bottom: 30px;
   }
   .sign-out {
     font-size: var(--sm);
