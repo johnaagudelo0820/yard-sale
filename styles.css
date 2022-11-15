@@ -116,8 +116,8 @@
   }
 
   /* mobile menu */
-  .mobile-menu {
-    /* display: flex; */
+  .mobile-menu > div{
+    display: flex;
     position: absolute;
     top: 70px;
     left: 0;
