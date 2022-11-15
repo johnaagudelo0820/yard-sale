@@ -5,14 +5,15 @@
     --text-input-field: F7F7F7;
     --hospital-green: #acd9b2;
   }
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
 
   .inactive {
     display: none;
   }
 
-  body {
-    font-family: 'Quicksand', sans-serif;
-  }
+
   .desktop-menu {
     background-color: var(--white);
     width: 100px;
@@ -113,3 +114,81 @@
     top: -2px;
     right: -3px;
   }
+
+  /* mobile menu */
+  .mobile-menu {
+    /* display: flex; */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 24px;
+    height: calc(100vh - 48px);
+    justify-content: space-around;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+  }
+  .mobile-menu ul li {
+    margin-bottom: 24px;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+  }
+  .email {
+    font-size: var(--sm);
+    color: var(--very-light-pink) !important;
+    font-weight: 300 !important;
+  }
+  .mobile-menu ul:first-child {
+    border-bottom: 1px solid var(--very-light-pink);
+  }
+  .mobile-menu > ul:last-child li {
+    margin-bottom: 5px;
+  }
+  .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green) !important;
+  }
+
+
+  @media (max-width: 640px) {
+    .menu {
+      display: block;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+    .navbar-email {
+      display: none;
+    }
+    .cards-container {
+      grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card {
+      width: 140px;
+    }
+    .product-card img {
+      width: 140px;
+      height: 140px;
+    }
+    .desktop-menu {
+        display: none;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
+    }
+  }
+
+
+  
