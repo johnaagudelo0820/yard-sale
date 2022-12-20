@@ -5,12 +5,12 @@ const menuBurgerIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 const ButtonShoppingCart = document.querySelector('.navbar-shopping-card');
-const DetailShoppingCart = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 
 menuEmail.addEventListener('click', () => toggleMenu(menu));
 menuBurgerIcon.addEventListener('click', () => toggleMenu(mobileMenu));
 ButtonShoppingCart.addEventListener('click', () =>
-  toggleMenu(DetailShoppingCart)
+  toggleMenu(shoppingCartContainer)
 );
 
 function toggleMenu(element) {
