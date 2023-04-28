@@ -1,8 +1,10 @@
 import React from 'react'
+import '@styles/global.scss'
 
 const App = () => {
+
   return (
-    <div style={{ color: 'red'}}>Hola mundo!!!</div>
+    <div>Hola mundo!!!</div>
   )
 }
 
