@@ -7,12 +7,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components'),
+      '@containers': path.resolve(__dirname, 'src/containers'),
       '@styles': path.resolve(__dirname, 'src/styles'),
     },
   },
@@ -32,7 +34,7 @@ module.exports = {
         },
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(css|scss)$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
@@ -50,6 +52,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
+    historyApiFallback: true,
     compress: true,
     port: 3005,
   },
