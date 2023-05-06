@@ -1,18 +1,15 @@
 import React from 'react';
-import {
-  Route,
-  BrowserRouter,
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Login from '@containers/Login';
 import Layout from '@containers/Layout';
-import RecoveryPassword from '../containers/RecoveryPassword';
+import RecoveryPassword from '@containers/RecoveryPassword';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 
 import '@styles/global.scss';
+import NewPassword from '../pages/NewPassword';
+import Orders from '../pages/Orders';
 
 const router = createBrowserRouter([
   {
@@ -28,10 +25,16 @@ const router = createBrowserRouter([
     path: '/recovery-password',
     element: <RecoveryPassword />,
   },
+  { path: '/new-password', element: <NewPassword /> },
+  { path: '/orders', element: <Orders /> },
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <Layout>
+      <RouterProvider router={router} />
+    </Layout>
+  );
 };
 
 export default App;
