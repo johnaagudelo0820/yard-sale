@@ -16,6 +16,7 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components'),
       '@containers': path.resolve(__dirname, 'src/containers'),
       '@styles': path.resolve(__dirname, 'src/styles'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
     },
   },
   module: {
@@ -36,6 +37,10 @@ module.exports = {
       {
         test: /\.(css|scss)$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        type: 'asset',
       },
     ],
   },
