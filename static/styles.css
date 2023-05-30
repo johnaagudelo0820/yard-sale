@@ -364,9 +364,6 @@
       width: 100%;
     }
 
-    .cards-container {
-      grid-template-columns: repeat(auto-fill, 140px);
-    }
     .product-card {
       width: 140px;
     }

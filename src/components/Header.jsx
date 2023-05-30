@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import Menu from '@components/Menu';
 
 import '@styles/Header.scss';
 
@@ -7,9 +9,13 @@ import menu from '@assets/icons/icon_menu.svg';
 import cart from '@assets/icons/icon_shopping_cart.svg';
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToogle = () => setToggle(!toggle);
+
   return (
     <nav>
-      <img src={menu} className="menu" alt="menu" />
+      {/* <img src={menu} className="menu" alt="menu" /> */}
       <div className="navbar-left">
         <img src={logo} alt="logo" className="nav-logo" />
         <ul>
@@ -35,30 +41,19 @@ const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">john@example.com</li>
+          <li className="navbar-email" onClick={handleToogle}>
+            john@example.com
+          </li>
           <li className="navbar-shopping-card">
             <img src={cart} alt="chopping card" />
             <div>2</div>
           </li>
         </ul>
       </div>
-      <div className="desktop-menu inactive">
-        <ul>
-          <li>
-            <a href="/" className="title">
-              My orders
-            </a>
-          </li>
-          <li>
-            <a href="/">My account</a>
-          </li>
-          <li>
-            <a href="/">Sign out</a>
-          </li>
-        </ul>
-      </div>
-      <div className="mobile-menu inactive">
-        {/* <div> */}
+
+      {toggle && <Menu />}
+
+      {/* <div className="mobile-menu inactive">
         <div>
           <ul>
             <li>
@@ -104,8 +99,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        {/* </div> */}
-      </div>
+      </div> */}
     </nav>
   );
 };
