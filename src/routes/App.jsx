@@ -11,6 +11,9 @@ import '@styles/global.scss';
 import NewPassword from '../pages/NewPassword';
 import Orders from '../pages/Orders';
 
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,10 +33,13 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
+  const initialState = useInitialState();
   return (
-    <Layout>
-      <RouterProvider router={router} />
-    </Layout>
+    <AppContext.Provider value={initialState}>
+      <Layout>
+        <RouterProvider router={router} />
+      </Layout>
+    </AppContext.Provider>
   );
 };
 
