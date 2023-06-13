@@ -1,26 +1,20 @@
 import React, { useState } from 'react';
 import ProductItem from '../components/ProductItem';
 
+import useGetProducts from '../hooks/useGetProducts';
+
 import '@styles/ProductList.scss';
 
 const API = `http://api.escuelajs.co/api/v1/products`;
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
-  useState(() => {
-    const getProducts = async () => {
-      const response = await fetch(API);
-      const data = await response.json();
-      setProducts(data);
-    };
-    getProducts();
-  }, []);
+  const products = useGetProducts(API);
 
   return (
     <section className="main-container">
       <div className="cards-container">
         {products.map((product) => (
-          <ProductItem key={product.id} />
+          <ProductItem key={product.id} product={product} />
         ))}
       </div>
     </section>
