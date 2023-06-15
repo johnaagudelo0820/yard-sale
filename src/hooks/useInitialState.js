@@ -14,9 +14,17 @@ const useInitialState = () => {
     });
   };
 
+  const removeFromCard = (payload) => {
+    setState({
+      ...state,
+      card: state.card.filter(({ id }) => id !== payload.id),
+    });
+  };
+
   return {
     state,
     addToCard,
+    removeFromCard,
   };
 };
 
