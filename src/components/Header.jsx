@@ -25,22 +25,22 @@ const Header = () => {
         <img src={logo} alt="logo" className="nav-logo" />
         <ul>
           <li>
-            <a href="/">All</a>
+            <a href="/yard-sale/">All</a>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <a href="/yard-sale/">Clothes</a>
           </li>
           <li>
-            <a href="/">Electrinics</a>
+            <a href="/yard-sale/">Electrinics</a>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <a href="/yard-sale/">Furnitures</a>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <a href="/yard-sale/">Toys</a>
           </li>
           <li>
-            <a href="/">Others</a>
+            <a href="/yard-sale/">Others</a>
           </li>
         </ul>
       </div>
@@ -66,44 +66,44 @@ const Header = () => {
         <div>
           <ul>
             <li>
-              <a href="/">CATEGORIES</a>
+              <a href="/yard-sale/">CATEGORIES</a>
             </li>
             <li>
-              <a href="/">All</a>
+              <a href="/yard-sale/">All</a>
             </li>
             <li>
-              <a href="/">Clothes</a>
+              <a href="/yard-sale/">Clothes</a>
             </li>
             <li>
-              <a href="/">Electronics</a>
+              <a href="/yard-sale/">Electronics</a>
             </li>
             <li>
-              <a href="/">Fornitures</a>
+              <a href="/yard-sale/">Fornitures</a>
             </li>
             <li>
-              <a href="/">Toys</a>
+              <a href="/yard-sale/">Toys</a>
             </li>
             <li>
-              <a href="/">Others</a>
+              <a href="/yard-sale/">Others</a>
             </li>
           </ul>
           <ul>
             <li>
-              <a href="/">My orders</a>
+              <a href="/yard-sale/">My orders</a>
             </li>
             <li>
-              <a href="/">My account</a>
+              <a href="/yard-sale/">My account</a>
             </li>
           </ul>
         </div>
         <ul>
           <li>
-            <a href="/" className="email">
+            <a href="/yard-sale/" className="email">
               john@example.com
             </a>
           </li>
           <li>
-            <a href="/" className="sign-out">
+            <a href="/yard-sale/" className="sign-out">
               Sign out
             </a>
           </li>

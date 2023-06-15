@@ -16,20 +16,20 @@ import useInitialState from '../hooks/useInitialState';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/yard-sale/',
     element: <Home />,
     errorElement: <NotFound />,
   },
   {
-    path: '/login',
+    path: '/yard-sale/login',
     element: <Login />,
   },
   {
-    path: '/recovery-password',
+    path: '/yard-sale/recovery-password',
     element: <RecoveryPassword />,
   },
-  { path: '/new-password', element: <NewPassword /> },
-  { path: '/orders', element: <Orders /> },
+  { path: '/yard-sale/new-password', element: <NewPassword /> },
+  { path: '/yard-sale/orders', element: <Orders /> },
 ]);
 
 const App = () => {

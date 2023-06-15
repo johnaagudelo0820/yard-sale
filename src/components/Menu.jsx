@@ -7,15 +7,15 @@ const Menu = () => {
     <div className="menu">
       <ul>
         <li>
-          <a href="/" className="title">
+          <a href="/yard-sale/" className="title">
             My orders
           </a>
         </li>
         <li>
-          <a href="/">My account</a>
+          <a href="/yard-sale/">My account</a>
         </li>
         <li>
-          <a href="/">Sign out</a>
+          <a href="/yard-sale/">Sign out</a>
         </li>
       </ul>
     </div>
