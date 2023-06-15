@@ -2,6 +2,8 @@ import React from 'react';
 
 import '../styles/Orders.scss';
 
+import flechitaImage from '../assets/icons/flechita.svg';
+
 const Orders = () => {
   return (
     <div className="my-order">
@@ -14,7 +16,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -22,7 +24,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -30,7 +32,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -38,7 +40,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -46,7 +48,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -54,7 +56,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -62,7 +64,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
           <div className="order">
             <p>
@@ -70,7 +72,7 @@ const Orders = () => {
               <span>6 articles</span>
             </p>
             <p>1560.00</p>
-            <img src="./icons/flechita.svg" alt="arrow" />
+            <img src={flechitaImage} alt="arrow" />
           </div>
         </div>
       </div>

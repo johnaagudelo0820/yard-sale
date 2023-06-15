@@ -5,12 +5,13 @@ import Menu from '@components/Menu';
 import '@styles/Header.scss';
 
 import logo from '@assets/logos/logo_yard_sale.svg';
-import menu from '@assets/icons/icon_menu.svg';
 import cart from '@assets/icons/icon_shopping_cart.svg';
 import AppContext from '../context/AppContext';
+import MyOrder from '../containers/MyOrder';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [toggleOrders, setToggleOrders] = useState(false);
   const {
     state: { card },
   } = useContext(AppContext);
@@ -48,7 +49,10 @@ const Header = () => {
           <li className="navbar-email" onClick={handleToogle}>
             john@example.com
           </li>
-          <li className="navbar-shopping-card">
+          <li
+            className="navbar-shopping-card"
+            onClick={() => setToggleOrders(!toggleOrders)}
+          >
             <img src={cart} alt="chopping card" />
             {card.length > 0 ? <div>{card.length}</div> : null}
           </li>
@@ -56,6 +60,7 @@ const Header = () => {
       </div>
 
       {toggle && <Menu />}
+      {toggleOrders && <MyOrder />}
 
       {/* <div className="mobile-menu inactive">
         <div>

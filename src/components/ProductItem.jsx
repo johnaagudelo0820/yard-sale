@@ -7,7 +7,7 @@ import AppContext from '../context/AppContext';
 
 // "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 
-const ProductItem = ({ product: { title, images, price } }) => {
+const ProductItem = ({ product: { id, title, images, price } }) => {
   const { addToCard } = useContext(AppContext);
 
   const handlerCart = (product) => {
@@ -26,7 +26,7 @@ const ProductItem = ({ product: { title, images, price } }) => {
           <p>$ {price}</p>
           <p>{title}</p>
         </div>
-        <figure onClick={() => handlerCart({ title, images, price })}>
+        <figure onClick={() => handlerCart({ id, title, image, price })}>
           <img src={addCardImage} alt="add-card" />
         </figure>
       </div>
