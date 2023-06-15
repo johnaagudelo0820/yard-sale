@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/johnaagudelo0820/yard-sale/issues"
   },
-  "homepage": "https://github.com/johnaagudelo0820/yard-sale#readme",
+  "homepage": "https://johnaagudelo0820.github.io/yard-sale/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
